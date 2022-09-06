@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>-webkit-box</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                width: 100%;
+                height: 100%;
+                background-color: #eeeeee;
+            }
+
+            #container {
+                width: 600px;
+                height: 300px;
+                margin: 30px auto;
+                background-color: #ffffff;
+            }
+
+            .item {
+                height: 50px;
+                width:100px;
+            }
+
+            .item-1 {
+                background: #e6f7ff;
+                border: 1px solid #91d5ff;
+                border-radius: 2px;
+                background-color: #e6f7ff;
+            }
+
+            .item-2 {
+                background: #fff1f0;
+                border: 1px solid #ffa39e;
+                border-radius: 2px;
+                background-color: #fff1f0;
+            }
+
+            .item-3 {
+                background: #f6ffed;
+                border: 1px solid #b7eb8f;
+                border-radius: 2px;
+                background-color: #f6ffed;
+            }
+
+            #container {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-box-align: center ;
+                -webkit-line-clamp:2;
+                /* overflow:hidden; */
+   
+ 
+
+                /* box-align */ /* box-pack */
+
+            }
+
+
+            .item-1 {
+                width: 2000px;
+            }
+            .item-2 {
+
+                
+                /* -webkit-box-flex: 2; */
+            }
+            .item-3 {
+                /* -webkit-box-flex: 3; */
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" value="谭金涛" />
+        <div id="container">
+            <div class="item item-1">item-1</div>
+            <div class="item item-2">item-2</div>
+            <div class="item item-3">item-3</div>
+        </div>
+
+        <script>
+            container.addEventListener(
+                'click',
+                (e) => {
+                    console.log(e);
+                },
+                false
+            );
+        </script>
+    </body>
+</html>

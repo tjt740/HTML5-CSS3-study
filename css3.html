@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css3</title>
+    <style>
+        /* 类名选择 */
+        .text-input {
+            border: 1px solid red;
+        }
+
+        /* 特定type选择 */
+        input[type='button'] {
+            color: tan;
+        }
+
+        /* 特定子级 */
+        .box>.box-p {
+            color: yellowgreen
+        }
+
+        /* 不特定子级 */
+        .box p {
+            font-weight: bold;
+        }
+
+        /* 兄弟级中紧邻的<1>个 */
+        .h3+p {
+            color: blue;
+        }
+
+        /* 兄弟级中紧邻的<所有> */
+        /* .h3 ~ p{
+                color: orange;
+            }
+ */
+
+        span {
+            /* font-variant: normal  small-caps; */
+            font-style: oblique
+        }
+
+        .wrap{
+            padding: 10px;
+            border:1px solid rgb(255, 0, 0);
+        }
+        .box2 {
+            background: #FFCB00;
+            display: inline;
+            vertical-align: middle;
+        }
+
+        .box2a {
+            font-size: 50px;
+        }
+
+        .box3 {
+            background: #00D546;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .box3a {
+            width: 100px;
+            height: 80px;
+        }
+
+        .box3b {
+            width: 100px;
+            height: 40px;
+        }
+
+        .webkit-box{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            word-wrap:break-word;
+        }
+        .webkit-box p{
+            /* text-decoration:underline; */
+            /* text-shadow: 5px 5px 3px gray; */
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(194, 211, 173)">
+    <input type="text" class="text-input" value="tjt740" />
+    <input type="password" class="text-input" value="1234567" />
+    <input type="button" class="text-input" value="按钮" />
+
+    <div class="box">
+        <p class="box-p">
+            p-1
+        <p class="box-p-child">p-1-1</p>
+        </p>
+    </div>
+
+
+    <p>这是段落标签</p>
+    <p>这是段落标签</p>
+    <h3 class="h3">这是标题标签</h3>
+    <p>这是段落标签</p>
+    <p>这是段落标签</p>
+    <h3>这是标题标签</h3>
+    <p>这是段落标签</p>
+    <p>这是段落标签</p>
+
+
+    <div class="wrap">
+        <div class="box2 box2a">行内元素</div>
+        <div class="box2 box2b">行内元素</div>
+    </div>
+    <br/>
+    <div class="wrap">
+        <div class="box3 box3a">行内块级元素</div>
+        <div class="box3 box3b">行内块级元素</div>
+    </div>
+    <br/>
+    <div class="wrap webkit-box">
+        <p>
+            When tomorrow turns in today, yesterday, and someday that no more important in your memory, we suddenly realize that we r pushed forward by time. This is not a train in still in which you may feel forward when another train goes by. It is the truth that we've all grown up. And we become different.
+        </p>
+    </div>
+</body>
+
+</html>

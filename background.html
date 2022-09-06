@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <style>
+        body{
+            background-color:rgba(22, 101, 56, 0.551)
+        }
+        #box{
+            width:800px;
+            height: 800px;
+            padding:50px;
+            margin: 0 auto;
+            /* overflow-y: scroll; */
+            border: 10px solid orange;
+        }
+
+        #box{
+            /* 背景颜色 */
+            background-color: tan; 
+            /* 背景图片 */
+            background-image: url('./background/img.jpg');
+            /* 背景图片重复填充 */
+            background-repeat: no-repeat;
+            /* 背景图片是否随滚动条一起滚动 */
+            /* background-attachment: scroll; */
+            /* 背景尺寸 */
+            background-size: cover;
+            /* 背景 */
+            /* 背景 */
+        }
+
+        .child{
+            width: inherit;
+            height: 2000px;
+        }
+
+        input::before{
+            content: '';
+
+        }
+
+        /* square、circle、disc、decimal、lower-alpha等 none */
+        ul li{
+            list-style-type: circle;
+            /* list-style-image: url('./background/img.jpg'); */
+        }
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <div id="box">
+        <!-- <div class="child"></div> -->
+    </div>
+    
+    
+    <script>
+</script>
+
+
+
+</body>
+</html>

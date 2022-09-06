@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML标签</title>
+
+        <style>
+            html,
+            body {
+                scroll-behavior: smooth;
+            }
+            div {
+                caret-color: chartreuse;
+                width: 100px;
+                height: 100px;
+                border:1px solid #000
+            }
+        </style>
+    </head>
+    <body style="background-color: peru">
+        <a href="#jumpUrl">跳转至锚点链接</a>
+        <br />
+        <em>em标签</em>
+        <br />
+        <var>var标签</var>
+        <br />
+        <dfn>dfn标签</dfn>
+        <br />
+        <i>i标签</i>
+        <br />
+
+        <b>b标签</b>
+        <br />  
+        <strong>strong标签（更加强调标签跟b标签相似）</strong>
+        （利于引擎优化，过度使用strong标签也同样有搜索引擎处罚的可能。）
+        <br />
+
+        <code>code标签</code>
+        <br />
+        <samp>samp标签</samp>
+        <br />
+
+        <kbd>kbd标签</kbd>
+        <br />
+
+        <xmp><p>xmp标签</p></xmp>
+        <br />
+        <!-----b标签------->
+
+        <!-----U标签------->
+        <u>u标签</u>
+
+        <br />
+        <!-----I标签------->
+        <br />
+
+        <!-----删除线------>
+
+        <del>del标签</del>
+        <br />
+        <s>s标签</s>
+        <br />
+        <!-----上角标sup、下角标sub---->
+        3
+        <sup>sup标签</sup>
+        <br />
+        2
+        <sub>sub标签</sub>
+
+        <hr />
+
+        <img
+            src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=827387740,491012223&fm=58&bpow=1920&bpoh=1920"
+            alt="月亮"
+            width="200"
+            height="200"
+            title="moon"
+        />
+
+        <ul>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+        </ul>
+
+        <a href="" name="jumpUrl">被锚记点链接位置</a>
+        <a href="javascript:alert('弹窗嘿嘿嘿')">弹窗</a>
+
+        <a href="#">test3</a>
+
+        <br />
+        <hr />
+
+        <marquee
+            id="myMarquee"
+            behavior="scroll"
+            direction="right"
+            height="200"
+            width="300"
+            loop
+            style="border: 1px solid black"
+            onmouseover="stop()"
+            onmouseleave="start()"
+            scrollAmount="6"
+        >
+            你好
+        </marquee>
+
+        <br />
+        <hr />
+
+        <pre>
+        &lt;html&gt;			
+            &lt;head&gt;
+         &lt;/head&gt;
+              &lt;body&gt;
+              &lt;body&gt;
+        &lt;/html&gt;
+    </pre>
+    <div contenteditable="true"></div>
+    <div contenteditable="false"></div>
+    <br />
+
+        <iframe
+            src="https://www.bilibili.com/"
+            frameborder="0"
+            style="width: 200px; height: 200px"
+        ></iframe>
+        <br />
+        <input type="text" value="哈哈" />
+        <br />
+
+   
+        <script>
+            function stop() {}
+
+            function start() {}
+        </script>
+    </body>
+</html>

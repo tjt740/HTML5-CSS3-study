@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>position</title>
+
+        <style>
+            /*当屏幕宽度缩小到990px时 出现新样式，  ps: 不能用分号'xxpx' */
+            @media screen and (max-width: 990px) {
+                #container {
+                    background-color: rgb(117, 212, 119);
+                }
+            }
+
+            /* 当屏幕超过990px时 出现新样式， 避免max-width无法替代 css里固定的width*/
+            @media screen and (min-width: 990px) {
+                #container {
+                    background-color: rgb(223, 187, 141);
+                }
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+            }
+
+            #container {
+                width: 600px;
+                height: 400px;
+                margin: 30px auto;
+                /* background-color: #f6ffed; */
+            }
+
+            .item {
+                height: 150px;
+                width: 200px;
+                display: inline-block;
+            }
+
+            .item-1 {
+                background: #e6f7ff;
+                border: 1px solid #91d5ff;
+                border-radius: 2px;
+                background-color: #e6f7ff;
+            }
+
+            .item-2 {
+                background: #fff1f0;
+                border: 1px solid #ffa39e;
+                border-radius: 2px;
+                background-color: #fff1f0;
+            }
+
+            .item-3 {
+                background: #f6ffed;
+                border: 1px solid #b7eb8f;
+                border-radius: 2px;
+                background-color: #f6ffed;
+            }
+
+            #container {
+                /* display: flex; */
+                /* flex-direction: column; */
+                overflow-y: auto;
+            }
+
+            #container::-webkit-scrollbar {
+                /*滚动条整体样式*/
+                width: 3px;
+                /*高宽分别对应横竖滚动条的尺寸*/
+                height: 3px;
+            }
+
+            #container::-webkit-scrollbar-thumb {
+                /*滚动条里面小方块*/
+                border-radius: 5px;
+                -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+            #container::-webkit-scrollbar-track {
+                /*滚动条里面轨道*/
+                -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                border-radius: 0;
+                background: rgba(0, 0, 0, 0.1);
+            }
+
+            .item-1 {
+            }
+            .item-2 {
+            }
+            .item-3 {
+            }
+            .img {
+                display: block;
+                margin-bottom: 2px;
+                width: 300px;
+                height: 300px;
+                background-color: rgb(127, 160, 151);
+            }
+
+            .box {
+                width: 150px;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                margin: 100px auto;
+                color: rgb(48, 89, 153);
+                background-color: rgb(222, 228, 238);
+            }
+
+            html,
+            body {
+                scroll-behavior: smooth; /*  平滑滚动  配合锚点链接使用。 */
+            }
+            #container {
+                scroll-behavior: smooth;
+            }
+
+            .box {
+                animation-name: tjt;
+                animation-duration: 5s;
+                animation-timing-function: ease;
+                animation-delay: 3s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: none;
+                animation-direction: normal;
+                animation-play-state: running;
+            }
+
+            /* 第一种写法 */
+            /* @keyframes tjt {
+                from {
+                    transform: translateX(100px);
+                }
+                to {
+                    transform: translateX(-100px);
+                }
+            } */
+            /* 第二种写法 */
+            @-webkit-keyframes tjt {
+                0% {
+                    color: #b7eb8f;
+                    transform: translateX(100px);
+                }
+                25% {
+                    color: #ffa39e;
+                    transform: translateX(50px);
+                }
+                50% {
+                    color: #000000;
+                    transform: translateX(-50px);
+                }
+                100% {
+                    color: violet;
+                    transform: translateX(-100px);
+                }
+            }
+            .main{
+                width: 800px;
+                height: 500px;
+            }
+            .item:nth-child(1){
+                color: red !important;
+
+                -webkit-user-modify:read-write;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">animation</div>
+        <div id="container">
+        <a name="name"></a>
+
+            <img id="img1" class="img" alt="1" />
+            <img id="img2" class="img" alt="2" />
+            <img id="img3" class="img" alt="3" />
+            <img id="img4" class="img" alt="4" />
+            <img id="img5" class="img" alt="5" />
+            <img id="img6" class="img" alt="6" />
+            <img id="img7" class="img" alt="7" />
+            <img id="img8" class="img" alt="8" />
+            <img id="img9" class="img" alt="9" />
+            <img id="img10" class="img" alt="10" />
+
+            <a href="#name">锚点链接</a>
+        </div>
+
+        <div class="main">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+        </div>
+
+        <script>
+            //获取全部img标签
+            const imgUrl =
+                'https://img.alicdn.com/tfs/TB1iEQQOFP7gK0jSZFjXXc5aXXa-350-350.jpg';
+            const loadSingleImage = (imgId) => {
+                setTimeout(() => {
+                    document.getElementById(imgId).src = imgUrl;
+                    console.log(`${imgId}已加载`);
+                }, 1000);
+            };
+            //获取全部img标签
+            const imgList = document.getElementsByClassName('img');
+
+            container.addEventListener('scroll', (e) => {
+                //当发生滚动事件时调用loadSingleImage事件;
+                // loadSingleImage();
+
+                ergodic(e.target.scrollTop);
+            });
+            function ergodic(scrollTop) {
+                console.log(scrollTop);
+                if (scrollTop) {
+                    // 遍历每一张图
+                    for (let i of imgList) {
+                        //判断当前图片是否在可视区内
+                        if (i.offsetTop <= window.innerHeight + scrollTop) {
+                            console.log(i.id);
+                            loadSingleImage(i.id);
+                        }
+                    }
+                }
+            }
+            //没发生滚动事件时也要先执行一次
+            //   loadSingleImage();
+            ergodic();
+        </script>
+    </body>
+</html>
